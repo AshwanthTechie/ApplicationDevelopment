@@ -1,0 +1,34 @@
+.split-screen-container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflow to prevent unwanted scrollbars */
+  }
+  
+  .split-screen-left,
+  .split-screen-right {
+    flex: 1; /* Take equal space */
+    overflow: auto; /* Allow scrolling if content overflows */
+  }
+  
+  .split-screen-left {
+    border-right: 2px solid #ccc; /* Border to separate panes */
+    background-color: #f9f9f9; /* Light background color */
+  }
+  
+  .split-screen-right {
+    background-color: #ffffff; /* Background color for the right pane */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .split-screen-container {
+      flex-direction: column; /* Stack panes vertically on small screens */
+    }
+  
+    .split-screen-left,
+    .split-screen-right {
+      border-right: none; /* Remove border on small screens */
+      border-bottom: 2px solid #ccc; /* Add border at the bottom */
+    }
+  }
+  
